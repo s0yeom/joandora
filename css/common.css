@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+body, h1, h2, h3, h4, h5, h6, ul, p { margin: 0; padding: 0; }
+ul li { list-style: none; }
+a { text-decoration: none; }
+
+.hidden { position: absolute; left: -9999px; }
+
+body { font-family: 'NanumGothic', 'NanumGothicLight', 'NanumGothicBold', 'NanumGothicExtraBold', sans-serif;
+        background: linear-gradient(180deg, #87ceeb, #fff 800px) no-repeat; }
+
+#wrap { background: #fff;
+        width: 960px; margin: 8px auto 0;
+        border: 1px solid #e7e7e7; }
+
+#mainHeader { height: 280px; background-image: url(../images/bg_header.png);
+              position: relative; }
+#mainHeader h1 { position: absolute; top: 50px; left: 20px;
+                  font-size: 60px; font-family: 'NanumGothicExtraBold'; color: #fff;
+                  text-shadow: 3px 3px #ffcf00; }
+
+#gnb ul { display: flex; height: 60px; }
+#gnb ul li { width: 25%; text-align: center; line-height: 60px; }
+#gnb ul li a { display: block; color: #fff; background: #060; }
+#gnb ul li a:hover { color: #000; background: #ff0; }
+
+main { width: 740px;
+        float: left; }
+
+#content h2 { padding: 30px 10px 0; }
+#content article { padding: 10px 10px 40px; }
+#content article h3 { padding: 10px 0; font-size: 18px; }
+#content article p { padding: 5px 0;
+                      font-size: 14px; line-height: 22px; }
+
+#sidePhoto { background: #dfd; width: 220px;
+              float: right;
+              text-align: center; padding: 20px 0 10px;
+              box-sizing: border-box; }
+#sidePhoto img { border: 1px solid #ccc; box-sizing: border-box; }
+
+#footer { clear: both;
+          background: #061f1f; color: #fff; font-size: 14px;
+          padding: 20px 0; text-align: center; }
+
+@media screen and ( max-width: 1023px ) {
+  #wrap { width: 580px; }
+  main { width: 100%; float: none; }
+  #sidePhoto { width: 100%; float: none; }
+  #sidePhoto img { width: 176px; }
+ }
+
+ @media screen and ( max-width: 599px ) {
+  body { background: none; }
+  #wrap { width: 100%; margin: 0 auto; border: none; }
+  #mainHeader { background: #061f1f; height: 75px; }
+  #mainHeader h1 { position: absolute; top: 10px; left: 15px;
+                     font-size: 32px; text-shadow: none; color: #ff0; }
+  #gnb ul { display: block; height: auto;
+            padding: 14px 20px 0; }
+  #gnb ul li { width: auto; line-height: 41px;
+                border: 1px solid #ccc; border-radius: 10px;
+                box-sizing: border-box;
+                margin-bottom: 10px; }
+  #gnb ul li a { color: #000; background: none; font-size: 14px; }
+  #gnb ul li a:hover { background: #ff0; border-radius: 10px; }
+  #sidePhoto { background: none; }
+  #sidePhoto img { width: auto; }
+ }
